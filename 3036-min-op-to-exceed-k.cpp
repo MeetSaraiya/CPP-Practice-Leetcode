@@ -21,4 +21,7 @@ int main(){
     vector<int>nums = {2,11,10,1,3};
     int k = 10;
     cout<<minOperations(nums,k);
+
+
+    
 }
