@@ -27,22 +27,37 @@
 // }
 #include<bits/stdc++.h>
 using namespace std;
+// int minOperations(vector<int>& nums, int k) {
+//     priority_queue<int,vector<int>,greater<int>>s(nums.begin(),nums.end());
+//     int c = 0;
+
+//     while(s.size() >= 2 && s.top()<k){
+//     int x = s.top();//x is smallest element
+//     s.pop();
+//     int y = s.top();//y is second smallest element
+//     s.pop();
+//     //int ans = min(x,y) * 2 + max(x,y);  
+//     int ans = x * 2 + y; // 
+//     s.push(ans);
+//     c++;
+//     }
+//     return c;
+// }
 int minOperations(vector<int>& nums, int k) {
-    priority_queue<int,vector<int>,greater<int>>s(nums.begin(),nums.end());
+    priority_queue<long long,vector<long long>,greater<long long>>s(nums.begin(),nums.end());
     int c = 0;
 
     while(s.size() >= 2 && s.top()<k){
-    int x = s.top();//x is smallest element
+    long long x = s.top();//x is smallest element
     s.pop();
-    int y = s.top();//y is second smallest element
+    long long y = s.top();//y is second smallest element
     s.pop();
     //int ans = min(x,y) * 2 + max(x,y);  
-    int ans = x * 2 + y; // 
+    long long ans = x * 2 + y; // 
     s.push(ans);
     c++;
     }
     return c;
-}
 int main(){
     vector<int>nums = {2,11,10,1,3};
     int k = 20;
