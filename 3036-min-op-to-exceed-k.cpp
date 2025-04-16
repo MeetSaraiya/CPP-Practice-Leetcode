@@ -58,6 +58,7 @@ int minOperations(vector<int>& nums, int k) {
     c++;
     }
     return c;
+}
 int main(){
     vector<int>nums = {2,11,10,1,3};
     int k = 20;
